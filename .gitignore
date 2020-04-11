@@ -1,5 +1,4 @@
-.swp
-*.sh
-kata.c
+*
+!*.c
 test.c
-notes.txt
+kata.c
