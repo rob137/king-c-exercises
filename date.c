@@ -2,15 +2,77 @@
 
 int main(void) {
   int day, month, year;
-  printf("Enter day: ");
-  scanf("%d", &day);
 
-  printf("Enter month: ");
-  scanf("%d", &month);
+  printf("Enter date (mm/dd/yy): ");
+  scanf("%d/%d/%d", &day, &month, &year);
 
-  printf("Enter year: ");
-  scanf("%d", &year);
+  printf("Dated this %d", day);
 
-  printf("You entered the date: %d%d%d\n", year, month, day);
+  switch (day) {
+    case 1:
+    case 21:
+    case 31:
+      printf("st");
+      break;
+    case 2:
+    case 22:
+      printf("nd");
+      break;
+    case 3:
+    case 23:
+      printf("rd");
+      break;
+    default:
+      printf("th");
+      break;
+  }
+
+  printf(" day of ");
+
+  switch (month) {
+    case 1:
+      printf("January");
+      break;
+    case 2:
+      printf("February");
+      break;
+    case 3:
+      printf("March");
+      break;
+    case 4:
+      printf("April");
+      break;
+    case 5:
+      printf("May");
+      break;
+    case 6:
+      printf("June");
+      break;
+    case 7:
+      printf("July");
+      break;
+    case 8:
+      printf("August");
+      break;
+    case 9:
+      printf("September");
+      break;
+    case 10:
+      printf("October");
+      break;
+    case 11:
+      printf("November");
+      break;
+    case 12:
+      printf("December");
+      break;
+  }
+
+  printf(" ");
+
+  year = year > 20 ? 1900 + year : 2000 + year;
+
+  printf("%d\n", year);
+
   return 0;
 }
