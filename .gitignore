@@ -1,4 +1,4 @@
-*
+!*.sh
 !*.c
 test.c
 kata.c
