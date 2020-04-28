@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Pushes all untracked files in the directory
 FILENAMES=$(git ls-files --others --exclude-standard)
 
 for filename in $FILENAMES
